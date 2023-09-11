@@ -1,8 +1,8 @@
-from klefki.curves.bns.bn128 import BN128ScalarFP as FP, ECGBN128 as ECG
-from klefki.algebra.utils import randfield
-from klefki.zkp.groth16 import groth16
-from klefki.zkp.groth16.r1cs import R1CS
-from klefki.zkp.groth16.qap import QAP
+from zkp_playground.curves.bns.bn128 import BN128ScalarFP as FP, ECGBN128 as ECG
+from zkp_playground.algebra.utils import randfield
+from zkp_playground.zkp.groth16 import groth16
+from zkp_playground.zkp.groth16.r1cs import R1CS
+from zkp_playground.zkp.groth16.qap import QAP
 
 
 @R1CS.r1cs(FP)
@@ -25,3 +25,6 @@ def test_groth16():
     tau, sigma = groth16.setup(R, len(a))
     pi = groth16.prov(R, H, tau, sigma, a)
     assert groth16.vfy(R, tau, a, pi)
+
+
+test_groth16()

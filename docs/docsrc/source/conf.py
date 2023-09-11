@@ -17,12 +17,12 @@ sys.path.insert(0, os.path.abspath('../../'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'klefki'
-copyright = '2019, Ryan Kung'
-author = 'Ryan Kung'
+project = 'zkp-playground'
+copyright = '2023, Oxorio'
+author = 'Oxorio'
 
 # The full version, including alpha/beta/rc tags
-release = '1.7'
+release = '1.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -42,7 +42,7 @@ extensions.append('autoapi.extension')
 
 
 autoapi_type = 'python'
-autoapi_dirs = ['../../../klefki']
+autoapi_dirs = ['../../../zkp_playground']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
